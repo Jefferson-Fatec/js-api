@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta CEP</title>
+    <link rel="stylesheet" href="style.css"> // Opcional: para estilizar com Bootstrap ou CSS customizado
+</head>
+<body>
+
+    <div class="container"> // Exemplo com Bootstrap
+        <h2>Consultar Endereço por CEP</h2>
+        <form id="form-cep">
+            <div class="form-group">
+                <label for="cep">CEP:</label>
+                <input type="text" class="form-control" id="cep" required>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="buscarCep()">Buscar</button> // Botão para disparar a busca
+
+            <h3>Dados do Endereço:</h3>
+            <div class="form-group">
+                <label for="logradouro">Logradouro:</label>
+                <input type="text" class="form-control" id="logradouro" readonly> // readonly para não ser editado
+            </div>
+            <div class="form-group">
+                <label for="bairro">Bairro:</label>
+                <input type="text" class="form-control" id="bairro" readonly>
+            </div>
+            <div class="form-group">
+                <label for="localidade">Localidade:</label>
+                <input type="text" class="form-control" id="localidade" readonly>
+            </div>
+            <div class="form-group">
+                <label for="uf">UF:</label>
+                <input type="text" class="form-control" id="uf" readonly>
+            </div>
+        </form>
+        <p id="mensagem-erro" style="color: red;"></p> // Para exibir mensagens de erro
+    </div>
+
+    </div> // ... dentro do div container
+        </form>
+        <p id="mensagem-erro" style="color: red;"></p>
+        <p id="mensagem-carregando" style="display: none; color: blue;">Buscando CEP...</p> // Novo elemento para a mensagem de carregamento
+    </div>
+
+    <script src="script.js"></script> // Nosso arquivo JavaScript
+</body>
+</html>
